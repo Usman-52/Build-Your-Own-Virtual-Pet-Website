@@ -40,7 +40,29 @@ function getInfo() {
     yourPet.happiness = +prompt(`Please tell me, what's the happiness level of ${yourPet.name}? (0-100)`);
     yourPet.hunger = +prompt(`Please tell me, what's the hunger level of ${yourPet.name}? (0-100)`);
 
+    let letsPlayGame = true;
+    while (letsPlayGame) {
+        let play = +prompt(`What would you like to do with ${yourPet.name}? Choose one of the options:
+            1) Feed    2) Play
+            3) Age     4) Quit`);
     
+        if(play === 1) {
+            yourPet.feed();
+        }
+        else if(play === 2) {
+            yourPet.play();
+        }
+        else if(play === 3) {
+            yourPet.agePet();
+        }
+        else if (play === 4) {
+            alert("Thank you so much for participating!");
+            letsPlayGame = false;
+        }
+        else {
+            alert("⛔ Incorrect option! Kindly choose again.");
+        }
+    }
 }
 
 getInfo();
