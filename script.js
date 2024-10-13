@@ -11,6 +11,16 @@ var yourPet = {
         alert(`${this.name} is fed, and the hunger level is ${this.hunger}`);
     },
 
+    play: function() {
+        if(this.hunger < 100) {
+            this.happiness += 20;
+            if(this.happiness > 100) this.happiness = 100; 
+            alert(`${this.name} played, now its happiness level is ${this.happiness}`);
+        } else {
+            alert(`${this.name} is too hungry to play!`);
+        }
+    },
+    
     
 }
 
