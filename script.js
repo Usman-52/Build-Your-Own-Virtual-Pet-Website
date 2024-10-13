@@ -33,4 +33,14 @@ var yourPet = {
 }
 
 
+function getInfo() {
+    yourPet.name = prompt("Please tell me, what's your pet's name?");
+    yourPet.type = prompt(`Please tell me, what's the type of ${yourPet.name}? (cat, dog, etc.)`);
+    yourPet.age = +prompt(`Please tell me, what's the age of ${yourPet.name}?`);
+    yourPet.happiness = +prompt(`Please tell me, what's the happiness level of ${yourPet.name}? (0-100)`);
+    yourPet.hunger = +prompt(`Please tell me, what's the hunger level of ${yourPet.name}? (0-100)`);
+
+    
+}
+
 getInfo();
