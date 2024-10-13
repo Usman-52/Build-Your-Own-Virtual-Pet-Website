@@ -21,7 +21,16 @@ var yourPet = {
         }
     },
     
-    
+    agePet: function() {
+        this.age += 1;
+        this.happiness -= 5;
+        this.hunger += 10;
+        if(this.happiness < 0) this.happiness = 0;
+        if(this.hunger > 100) this.hunger = 100;
+
+        alert(`${this.name} is now ${this.age} years old. Happiness: ${this.happiness}, Hunger: ${this.hunger}`);
+    }
 }
+
 
 getInfo();
